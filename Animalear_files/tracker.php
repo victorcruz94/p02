@@ -1,0 +1,1 @@
+BrainSINSTracker.trackingCallback({"@version":"0.1","message":"{}","status":"200"});

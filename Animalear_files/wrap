@@ -1,0 +1,80 @@
+ /*** Sociomantic ***/
+var customer = {
+identifier: TDConf.Config.leadNumber,
+};
+var product = {
+category : TDConf.Config.categoryDesc
+};
+(function(){
+var s = document.createElement('script');
+var x = document.getElementsByTagName('script')[0];
+s.type = 'text/javascript';
+s.async = true;
+s.src = ('https:'==document.location.protocol?'https://':'http://')
++ 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/animalear-es';
+x.parentNode.insertBefore( s, x );
+})();
+
+/*** Google - rmkt dinamico ***/
+var im1 = document.createElement('img');
+im1.setAttribute("src","//googleads.g.doubleclick.net/pagead/viewthroughconversion/975651120/?value=0&guid=ON&script=0&data=ecomm_prodid%3D%3Becomm_pagetype%3Dcategory%3Becomm_totalvalue%3D");
+im1.setAttribute("width","1");
+im1.setAttribute("height","1");
+s = document.getElementsByTagName('body')[0];
+s.appendChild(im1);
+
+/*** Adroll ***/
+    adroll_adv_id = "JQOGENF75ZFKTOUN4WLCYK";
+    adroll_pix_id = "Y7T7TFV6U5GP5GFV5GFZNI";
+ (function () {
+  var _onload = function(){
+   if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+   if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);};
+  if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+  else {window.attachEvent('onload', _onload)}}());
+
+ /*** VeInteractive ***/
+(function(d) { 
+var s = d.createElement("script"); 
+s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//config1.veinteractive.com/tags/0BDE76C6/DF3C/4A60/9386/F883F61E3468/tag.js"; 
+var a = d.getElementsByTagName("script")[0]; 
+a.parentNode.insertBefore(s, a); 
+}(document));
+
+/** Facebook **/
+(function() {
+ var _fbq = window._fbq || (window._fbq = []);
+ if (!_fbq.loaded) {
+  var fbds = document.createElement('script');
+  fbds.async = true;
+  fbds.src = '//connect.facebook.net/en_US/fbds.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(fbds, s);
+  _fbq.loaded = true;
+ }
+ _fbq.push(['addPixelId', '866954280006629']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+/** Criteo **/
+(function() {
+ var sc = document.createElement('script');
+ sc.async = "true";
+ sc.src = "//static.criteo.net/js/ld/ld.js";
+ document.body.appendChild(sc);
+ window.criteo_q = window.criteo_q || [];
+ window.criteo_q.push(
+  {event: "setAccount", account: 23175},
+  {event: "setSiteType", type: "d"},
+  {event: "setHashedEmail", email: TDConf.Config.mEmail},
+  {event: "viewList", item: TDConf.Config.listProd}
+ );
+})();
